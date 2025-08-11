@@ -30,9 +30,12 @@
     <!-- Enlace a la fuente 'Roboto' de Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <!-- Icono de la página (favicon) -->
-    <link rel="icon" href="assets/logo-todo-jardin.webp" type="image/webp">
+    <link rel="shortcut icon" href="https://todojardin.com.uy/assets/favicon.png" type="image/png">
+    <link rel="icon" type="image/png" sizes="48x48" href="https://todojardin.com.uy/assets/favicon.png">
+    <link rel="apple-touch-icon" sizes="48x48" href="https://todojardin.com.uy/assets/favicon.png">
 </head>
 <body>
+    <div id="page-wrapper">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPVJXD82"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -59,7 +62,7 @@
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
                     <li class="nav-item"><a href="#nosotros" class="nav-link">Nosotros</a></li>
-                    <li class="nav-item"><a href="#opiniones" class="nav-link">Opiniones</a></li>
+                    
                     <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
                 </ul>
             </nav>
@@ -118,55 +121,9 @@
             </div>
         </section>
 
-        <!-- Sección de Testimonios: Lo que dicen los clientes -->
-        <section id="opiniones" class="testimonials">
-            <div class="container">
-                <h2 class="section-title">Opiniones de nuestros clientes</h2>
-                <!-- Información de negocio verificado -->
-                <div class="verified-business">
-                    <h3>Alberto Todo Jardín</h3>
-                    <img src="assets/verified-icon.webp" alt="Icono de verificado" class="verified-icon" width="24" height="24">
-                </div>
-                <!-- Tarjeta de testimonio 1 -->
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <img src="assets/logo-google.webp" alt="Logo de Google" class="google-logo" width="24" height="24">
-                        <div class="testimonial-source">5 ESTRELLAS</div>
-                    </div>
-                    <div class="star-rating">
-                        <img src="assets/star.webp" alt="Estrella" width="24" height="24"><img src="assets/star.webp" alt="Estrella" width="24" height="24"><img src="assets/star.webp" alt="Estrella" width="24" height="24"><img src="assets/star.webp" alt="Estrella" width="24" height="24"><img src="assets/star.webp" alt="Estrella" width="24" height="24">
-                    </div>
-                    <p>"Excelente servicio. Dejaron mi jardín como nuevo. ¡Totalmente recomendables!"</p>
-                    <span>- María G.</span>
-                </div>
-                <!-- Tarjeta de testimonio 2 -->
-                <div class="testimonial-card">
-                     <div class="testimonial-header">
-                        <img src="assets/logo-google.webp" alt="Logo de Google" class="google-logo" width="24" height="24">
-                        <div class="testimonial-source">5 ESTRELLAS</div>
-                    </div>
-                    <div class="star-rating">
-                        <img src="assets/star.webp" alt="Estrella" width="24" height="24"><img src="assets/star.webp" alt="Estrella" width="24" height="24"><img src="assets/star.webp" alt="Estrella" width="24" height="24"><img src="assets/star.webp" alt="Estrella" width="24" height="24"><img src="assets/star.webp" alt="Estrella" width="24" height="24">
-                    </div>
-                    <p>"Muy profesionales y rápidos. La poda de los árboles quedó impecable."</p>
-                    <span>- Juan P.</span>
-                </div>
-                <!-- Tarjeta de testimonio 3 -->
-                <div class="testimonial-card">
-                     <div class="testimonial-header">
-                        <img src="assets/logo-google.webp" alt="Logo de Google" class="google-logo" width="24" height="24">
-                        <div class="testimonial-source">5 ESTRELLAS</div>
-                    </div>
-                    <div class="star-rating">
-                        <img src="assets/star.webp" alt="Estrella" width="24" height="24"><img src="assets/star.webp" alt="Estrella" width="24" height="24"><img src="assets/star.webp" alt="Estrella" width="24" height="24"><img src="assets/star.webp" alt="Estrella" width="24" height="24"><img src="assets/star.webp" alt="Estrella" width="24" height="24">
-                    </div>
-                    <p>"100% recomendable, confiables y buena gente. Se los recomiendo siempre a mi familia y amigos<br><br>Cumplieron y superaron expectativas<br><br>Los mejores en limpiezas de terrenos y mantenimiento de jardines en Montevideo"</p>
-                    <span>- CEO de High Value</span>
-                </div>
-            </div>
-        </section>
+        
 
-        <!-- Sección de Contacto: Información de contacto principal -->
+        
         <section id="contacto" class="contact">
             <div class="container">
                 <h2 class="section-title">Contacto</h2>
@@ -192,7 +149,7 @@
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#nosotros">Nosotros</a></li>
                     
-                    <li class="nav-item"><a href="#opiniones">Opiniones</a></li>
+                    
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
@@ -202,9 +159,10 @@
     </footer>
 
     <!-- Botón para volver al inicio de la página -->
-    <a href="#hero" class="back-to-top-btn" aria-label="Volver arriba">&#8593;</a>
+    <a href="#page-wrapper" class="back-to-top-btn" aria-label="Volver arriba">&#8593;</a>
 
     <!-- Enlace al archivo JavaScript principal para interactividad (cargado de forma asíncrona para no bloquear el renderizado) -->
     <script src="script.js" defer></script>
+    </div>
 </body>
 </html>

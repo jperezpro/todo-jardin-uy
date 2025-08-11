@@ -20,6 +20,14 @@ body {
     background-color: var(--bg-color);
 }
 
+#page-wrapper {
+    max-width: 1100px;
+    margin: 2rem auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    position: relative;
+}
+
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
@@ -30,9 +38,10 @@ body {
 .header {
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: 100;
     transition: background-color 0.3s ease;
 }
@@ -40,11 +49,6 @@ body {
 .header.scrolled {
     background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(8px);
-}
-
-.header.menu-active {
-    background-color: #fff; /* Asegura un fondo sólido cuando el menú está activo */
-    backdrop-filter: none;
 }
 
 .header.menu-active {
@@ -112,7 +116,6 @@ body {
     color: #fff;
     text-align: center;
     padding: 10rem 0;
-    margin-top: 70px; /* Header height */
 }
 
 .hero-title {
@@ -235,10 +238,19 @@ body {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 4rem;
     align-items: center;
-    text-align: left;
+    text-align: center;
+}
+
+.contact-info {
+    background-color: #fff;
+    padding: 3rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .contact-info h3 {
@@ -261,12 +273,28 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .verified-business h3 {
     margin-right: 0.5rem;
     font-size: 1.5rem;
+}
+
+.reviews-info {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.reviews-info p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.reviews-info .btn {
+    display: inline-block;
+    margin: 0 auto;
 }
 
 .testimonial-card {
@@ -491,4 +519,17 @@ main {
 
 .menu-toggle.active .bar {
     background-color: #fff;
+}
+
+/* Estilos para la insignia de verificación de reseñas */
+.verified-badge {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+}
+
+.verified-badge img {
+    margin-right: 0.5rem;
 }

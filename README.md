@@ -1,14 +1,12 @@
 # Alberto TodoJardín
 
-Este proyecto es un sitio web estático diseñado para "Alberto TodoJardín", un negocio de jardinería y poda en Montevideo, Uruguay. El sitio tiene como objetivo presentar los servicios de la empresa, mostrar trabajos realizados, compartir testimonios de clientes y facilitar el contacto a través de WhatsApp y un agendador de citas.
+Este proyecto es un sitio web estático diseñado para "Alberto TodoJardín", un negocio de jardinería y poda en Montevideo, Uruguay. El sitio tiene como objetivo presentar los servicios de la empresa, y facilitar el contacto a través de WhatsApp y un agendador de citas.
 
 ## Características
 
 - **Página de Inicio:** Presentación del negocio con un banner principal.
 - **Servicios:** Sección detallada de los servicios ofrecidos (poda, limpieza de terrenos, mantenimiento de jardines).
 - **Sobre Nosotros:** Información sobre la empresa y su experiencia.
-- **Testimonios:** Sección con comentarios de clientes satisfechos.
-
 - **Llamada a la Acción (CTA):** Invitación a solicitar presupuestos sin costo y agendar citas.
 - **Contacto:** Información de contacto principal con enlace directo a WhatsApp.
 - **Navegación Responsiva:** Menú adaptable para dispositivos móviles.
@@ -39,7 +37,7 @@ alberto-todo-jardin/
 ├── README.md           # Este archivo
 └── assets/             # Contiene imágenes y otros recursos multimedia
     ├── fondo-arboles-horizntal.webp
-    └── logo-todo-jardin.webp
+    ├── logo-todo-jardin.webp
 ```
 
 ¡Eso es todo! El sitio web debería cargarse y funcionar correctamente en tu navegador.

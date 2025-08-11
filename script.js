@@ -2,7 +2,7 @@ const header = document.querySelector('.header');
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.nav');
 const backToTopBtn = document.querySelector('.back-to-top-btn');
-const scrollElements = document.querySelectorAll('.service-card, .testimonial-card, .about p, .contact p');
+const scrollElements = document.querySelectorAll('.service-card, .about p, .contact p');
 const body = document.body;
 
 // Event listener para el botón de alternar menú (abre/cierra el menú móvil)
