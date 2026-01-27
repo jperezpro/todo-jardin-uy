@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://todojardin.com.uy/sitemap.xml
+
+# Block access to certain directories (if needed in the future)
+# Disallow: /admin/
+# Disallow: /private/
