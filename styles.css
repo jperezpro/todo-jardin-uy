@@ -369,9 +369,17 @@ body {
     font-size: 1.1rem;
 }
 
+.contact-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .contact-cta .btn i {
     margin-left: 0.5rem;
     font-size: 1.2rem;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* FAQ Section */
