@@ -105,7 +105,8 @@ body {
     height: 3px;
     margin: 5px auto;
     background-color: var(--text-color);
-    transition: all 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    will-change: transform;
 }
 
 /* Hero Section */
@@ -116,6 +117,14 @@ body {
     color: #fff;
     text-align: center;
     padding: 10rem 0;
+    /* Evitar fixed attachment en mobile para mejor performance */
+    background-attachment: scroll;
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        background-attachment: fixed;
+    }
 }
 
 .hero-title {
@@ -197,19 +206,95 @@ body {
 }
 
 /* About */
-.about p {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+.about {
+    background-color: #fff;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.about-text p {
+    /* This replaces the old .about p */
+    margin-bottom: 2rem;
     font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.about-values {
+    display: flex;
+    gap: 2rem;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.value-item i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.value-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.value-item p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.about-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('assets/fondo-arboles-horizntal.webp');
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    min-height: 400px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Responsive adjustments for About section */
+@media (min-width: 768px) {
+    .about-grid {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-values {
+        flex-direction: column;
+    }
+    .about-text h3 {
+        text-align: center;
+    }
 }
 
 /* CTA Section */
 .cta-section {
-    background-color: var(--primary-color);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('assets/fondo-arboles-horizntal.webp');
+    background-size: cover;
+    background-position: center;
     color: #fff;
     text-align: center;
     padding: 4rem 0;
+    /* Evitar fixed attachment en mobile para mejor performance */
+    background-attachment: scroll;
+}
+
+@media (min-width: 1024px) {
+    .cta-section {
+        background-attachment: fixed;
+    }
 }
 
 .cta-section .section-title {
@@ -222,8 +307,8 @@ body {
 }
 
 .cta-section .btn {
-    background-color: #fff;
-    color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: #fff;
     font-weight: 700;
 }
 
@@ -231,112 +316,141 @@ body {
     background-color: #eee;
 }
 
-/* Contact */
-.contact {
-    padding: 4rem 0;
+.cta-section .feature-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2.5rem;
+    display: inline-block;
+    text-align: left;
+    max-width: 500px;
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 4rem;
+.cta-section .feature-list li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    display: flex;
     align-items: center;
+}
+
+.cta-section .feature-list i {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    width: 30px;
     text-align: center;
 }
 
-.contact-info {
-    background-color: #fff;
-    padding: 3rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    max-width: 600px;
-    margin: 0 auto;
+/* Contact */
+.contact {
+    padding: 4rem 0;
+    background-color: var(--bg-color);
 }
 
-.contact-info h3 {
+.contact-grid {
+    text-align: center;
+}
+
+.contact-cta {
+    background-color: #fff;
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    max-width: 600px; /* Control the width */
+    margin: 0 auto; /* Center the block */
+}
+
+.contact-cta h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
-.contact-info p {
+.contact-cta p {
     margin-bottom: 2rem;
     font-size: 1.1rem;
 }
 
-/* Testimonials */
-.testimonials {
-    background-color: #fff;
-    padding: 4rem 0;
-}
-
-.verified-business {
-    display: flex;
+.contact-cta .btn {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
 }
 
-.verified-business h3 {
-    margin-right: 0.5rem;
-    font-size: 1.5rem;
-}
-
-.reviews-info {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.reviews-info p {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    color: #555;
-}
-
-.reviews-info .btn {
+.contact-cta .btn i {
+    margin-left: 0.5rem;
+    font-size: 1.2rem;
     display: inline-block;
+    vertical-align: middle;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 4rem 0;
+    background-color: #f9f9f9; /* Slightly off-white background for the section */
+}
+
+.faq-container {
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.testimonial-card {
-    background-color: var(--bg-color);
-    padding: 2rem;
-    border-radius: 5px;
-    margin-bottom: 2rem;
+.faq-item {
+    background-color: #fff;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
 }
 
-.testimonial-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
+.faq-item:last-child {
+    margin-bottom: 0;
 }
 
-.google-logo {
-    margin-right: 0.5rem;
+.faq-item[open] {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.2);
 }
 
-.testimonial-source {
+.faq-item summary {
+    font-size: 1.1rem; /* Slightly adjusted font size */
     font-weight: 700;
-    color: #555;
+    padding: 1.5rem;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    display: block;
+    transition: color 0.2s ease;
 }
 
-.star-rating {
-    margin-bottom: 1rem;
-}
-
-.star-rating span {
-    color: #ffc107;
-    font-size: 1.5rem;
-}
-
-.testimonial-card p {
-    font-style: italic;
-    margin-bottom: 1rem;
-}
-
-.testimonial-card span {
-    font-weight: 700;
+.faq-item summary:hover {
     color: var(--primary-color);
+}
+
+.faq-item summary::after {
+    content: '+';
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    font-weight: 400;
+    line-height: 1;
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.faq-item[open] summary::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-item[open] summary {
+    color: var(--primary-color);
+}
+
+.faq-answer {
+    padding: 0 1.5rem 1.5rem;
+    line-height: 1.7;
+    color: #555; /* Slightly softer text color for the answer */
 }
 
 /* Back to top button */
@@ -355,7 +469,8 @@ body {
     text-decoration: none;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.3s ease-out, visibility 0.3s ease-out;
+    will-change: opacity;
 }
 
 .back-to-top-btn.show {
@@ -363,24 +478,37 @@ body {
     visibility: visible;
 }
 
-/* Scroll animations */
-.service-card, .testimonial-card, .about p, .contact p {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s, transform 0.5s;
-}
-
-.service-card.visible, .testimonial-card.visible, .about p.visible, .contact p.visible {
+/* Scroll animations - Deshabilitadas en mobile para mejor rendimiento */
+.service-card, .about p, .contact p {
     opacity: 1;
     transform: translateY(0);
 }
 
+@media (min-width: 769px) {
+    .service-card, .about p, .contact p {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        will-change: opacity, transform;
+    }
+
+    .service-card.visible, .about p.visible, .contact p.visible {
+        opacity: 1;
+        transform: translateY(0);
+        will-change: auto;
+    }
+}
+
 /* Footer */
 .footer {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
     text-align: center;
     padding: 2rem 0;
+}
+
+.footer p a {
+    color: #fff;
 }
 
 /* Mobile Styles */
@@ -397,7 +525,9 @@ body {
     height: 100%;
     background-color: var(--mobile-menu-bg);
     transition: left 0.3s ease-in-out;
-    z-index: 101; /* Aumentado para asegurar que esté por encima del header */
+    z-index: 101;
+    will-change: left;
+    backface-visibility: hidden;
 }
 
     .nav.active {
@@ -430,6 +560,10 @@ body {
 
     .hero-title {
         font-size: 2.5rem;
+    }
+
+    .hero, .cta-section {
+        background-attachment: scroll;
     }
 
     .contact-grid {
@@ -494,6 +628,7 @@ main {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 0.3s ease-out forwards;
+    will-change: opacity, transform;
 }
 
 /* Se aplica un retraso a cada item para el efecto cascada */

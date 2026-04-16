@@ -1,6 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://todojardin.com.uy/">
+    <title>Todo Jardín | Poda y Jardinería en Montevideo y Canelones</title>
+    <meta name="google-site-verification" content="4AUpq8Se8YYIV0Wka6l6YLrPQgj7H_micPhrclaabeE" />
+    <meta name="description" content="Tala y poda de árboles, limpieza de terrenos y mantenimiento integral de jardines en Montevideo y Canelones. Somos el mejor aliado de tu jardín. Cotizá sin costo por WhatsApp!">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://todojardin.com.uy/">
+    <meta property="og:title" content="Todo Jardín | Poda y Jardinería en Montevideo y Canelones">
+    <meta property="og:description" content="Tala y poda de árboles, limpieza de terrenos y mantenimiento integral de jardines en Montevideo y Canelones. Somos el mejor aliado de tu jardín. Cotizá sin costo por WhatsApp!.">
+    <meta property="og:image" content="https://todojardin.com.uy/logo-todo-jardin.webp">
+
+    <!-- Schema.org LocalBusiness Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Todo Jardín",
+      "image": "https://todojardin.com.uy/assets/logo-todo-jardin.webp",
+      "description": "Empresa de jardinería y poda con más de 30 años de experiencia en Montevideo y Canelones. Servicios de tala y poda de árboles, limpieza de terrenos y mantenimiento integral de jardines.",
+      "url": "https://todojardin.com.uy/",
+      "telephone": "+598-91-665-895",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Montevideo",
+        "addressRegion": "Montevideo",
+        "addressCountry": "UY"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.9011,
+        "longitude": -56.1645
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Montevideo",
+          "addressCountry": "UY"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Canelones",
+          "addressCountry": "UY"
+        }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "16:00"
+      },
+      "paymentAccepted": "Efectivo, Tarjetas de crédito, Tarjetas de débito, Transferencia bancaria, Mercado Pago",
+      "currenciesAccepted": "UYU",
+      "foundingDate": "1995",
+      "slogan": "Somos el mejor aliado de tu jardín",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Jardinería",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Poda de Árboles y Cercos",
+              "description": "Realizamos podas de todo tipo, tanto en altura como en cercos, para mantener sus plantas sanas y con la forma deseada."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Limpieza de Terrenos",
+              "description": "Preparamos su terreno para nuevos proyectos, eliminando malezas y escombros de forma rápida y eficiente."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Mantenimiento de Jardines",
+              "description": "Ofrecemos planes de mantenimiento regulares para que su jardín luzca impecable durante todo el año."
+            }
+          }
+        ]
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "availableLanguage": "Spanish"
+      }
+    }
+    </script>
+
+    <!-- Enlace al archivo CSS principal para estilos generales -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Precarga de la imagen LCP para mejorar el rendimiento -->
+    <link rel="preload" fetchpriority="high" as="image" href="assets/fondo-arboles-horizntal.webp" type="image/webp">
+    <!-- Precarga de conexión a CDN para mejor rendimiento -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <!-- Precarga de fuentes de Google Fonts para mejorar el rendimiento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Enlace a la fuente 'Roboto' de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Icono de la página (favicon) -->
+    <link rel="icon" href="assets/favicon.ico" sizes="any">
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/favicon.png">
+    <!-- Font Awesome - Cargado de forma asíncrona para no bloquear renderización -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/solid.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/solid.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/brands.min.css">
+    </noscript>
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -8,31 +128,15 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NPVJXD82');</script>
     <!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alberto Todo Jardín | Poda y jardinería en Montevideo</title>
-    <meta name="description" content="Tala y poda de árboles, limpieza de terrenos y mantenimiento integral de jardines. Somos el mejor aliado de tu jardín. Solicita tu presupuesto sin costo!">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://todojardin.com.uy/">
-    <meta property="og:title" content="Servicio de Jardinería en Montevideo | Alberto Todo Jardín">
-    <meta property="og:description" content="Tala y poda de árboles, limpieza de terrenos y mantenimiento integral de jardines. Somos el mejor aliado de tu jardín. Solicita tu presupuesto sin costo!.">
-    <meta property="og:image" content="https://todojardin.com.uy/logo-todo-jardin.webp">
-
-    <!-- Enlace al archivo CSS principal para estilos generales -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- Precarga de la imagen LCP para mejorar el rendimiento -->
-    <link rel="preload" fetchpriority="high" as="image" href="assets/fondo-arboles-horizntal.webp" type="image/webp">
-    <!-- Precarga de fuentes de Google Fonts para mejorar el rendimiento -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Enlace a la fuente 'Roboto' de Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Icono de la página (favicon) -->
-    <link rel="shortcut icon" href="https://todojardin.com.uy/assets/favicon.png" type="image/png">
-    <link rel="icon" type="image/png" sizes="48x48" href="https://todojardin.com.uy/assets/favicon.png">
-    <link rel="apple-touch-icon" sizes="48x48" href="https://todojardin.com.uy/assets/favicon.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17422000134">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17422000134');
+    </script>
 </head>
 <body>
     <div id="page-wrapper">
@@ -45,7 +149,7 @@
         <div class="container">
             <!-- Logo del sitio que enlaza a la página de inicio -->
             <a href="index.html">
-                <img src="assets/logo-todo-jardin.webp" alt="Logo de Alberto Todo Jardín" class="logo">
+                <img src="assets/logo-todo-jardin.webp" alt="Logo de Todo Jardín" class="logo" width="50" height="50">
             </a>
             <!-- Acciones del encabezado, como el botón de WhatsApp y el botón de menú del móvil -->
             <div class="header-actions">
@@ -61,7 +165,7 @@
             <nav id="main-nav" class="nav" aria-hidden="true">
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#servicios" class="nav-link">Servicios</a></li>
-                    <li class="nav-item"><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                    <li class="nav-item"><a href="#cta" class="nav-link">Cotizaciones</a></li>
                     
                     <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
                 </ul>
@@ -74,31 +178,32 @@
         <!-- Sección Hero: Banner principal con título y subtítulo -->
         <section id="hero" class="hero">
             <div class="hero-content">
-                <h1 class="hero-title">Alberto Todo Jardin</h1>
-                <h2 class="hero-subtitle">Más de 30 años de experiencia en mantenimiento de jardines y podas.</h2>
-                <a href="https://calendar.app.google/Z9PNq6vBi7rQYaEL8" class="btn btn-primary btn-hero">Agendar Presupuesto</a>
+                <h1 class="hero-title">Todo Jardín</h1>
+                <p class="hero-subtitle">Más de 30 años de experiencia en mantenimiento de jardines y podas.</p>
+                <p class="hero-subtitle"><i class="fa-regular fa-credit-card"></i> Aceptamos todas las tarjetas</p>
+                <a href="https://wa.link/m5p2eo" class="btn btn-primary btn-hero">Cotizar por WhatsApp</a>
             </div>
         </section>
 
         <!-- Sección de Servicios: Muestra los servicios ofrecidos -->
         <section id="servicios" class="services">
             <div class="container">
-                <h2 class="section-title">Nuestros Servicios de Jardinería</h2>
+                <h2 class="section-title">Servicios de Jardinería</h2>
                 <div class="services-grid">
-                    <!-- Tarjeta de servicio: Poda de Árboles y Cercos -->
+                    <!-- Tarjeta de servicio: Mantenimiento de Jardines -->
                     <div class="service-card">
-                        <h3>Poda de Árboles y Cercos</h3>
-                        <p>Realizamos podas de todo tipo, tanto en altura como en cercos, para mantener sus plantas sanas y con la forma deseada.</p>
+                        <h3>Mantenimiento de Jardines</h3>
+                        <p>Ofrecemos planes de mantenimiento regulares para que su jardín luzca impecable durante todo el año.</p>
                     </div>
                     <!-- Tarjeta de servicio: Limpieza de Terrenos -->
                     <div class="service-card">
                         <h3>Limpieza de Terrenos</h3>
                         <p>Preparamos su terreno para nuevos proyectos, eliminando malezas y escombros de forma rápida y eficiente.</p>
                     </div>
-                    <!-- Tarjeta de servicio: Mantenimiento de Jardines -->
+                    <!-- Tarjeta de servicio: Poda de Árboles y Cercos -->
                     <div class="service-card">
-                        <h3>Mantenimiento de Jardines</h3>
-                        <p>Ofrecemos planes de mantenimiento regulares para que su jardín luzca impecable durante todo el año.</p>
+                        <h3>Poda de Árboles y Cercos</h3>
+                        <p>Realizamos podas de todo tipo, tanto en altura como en cercos, para mantener sus plantas sanas y con la forma deseada.</p>
                     </div>
                 </div>
             </div>
@@ -107,35 +212,98 @@
         <!-- Sección de Llamada a la Acción (CTA): Invita a solicitar presupuesto -->
         <section id="cta" class="cta-section">
             <div class="container">
-                <h2 class="section-title">Presupuesto sin costo</h2>
-                <p>Agende una visita para obtener un presupuesto personalizado y sin compromiso.</p>
-                <a href="https://calendar.app.google/Z9PNq6vBi7rQYaEL8" class="btn btn-primary">Agendar Visita</a>
+                <h2 class="section-title">Cotizaciones</h2>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-location-dot"></i> Nos enviás tu ubicación</li>
+                    <li><i class="fa-solid fa-video"></i> Un video con una breve explicación del trabajo a realizar</li>
+                    <li><i class="fa-solid fa-file-pdf"></i> Te enviamos la cotización en PDF en el momento por WhatsApp.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> No tiene costo</li>
+                </ul>
+                <a href="https://wa.link/m5p2eo" class="btn btn-primary">Cotizar por WhatsApp</a>
             </div>
         </section>
 
-        <!-- Sección Sobre Nosotros: Información sobre la empresa -->
-        <section id="nosotros" class="about">
+                    <!-- Sección Sobre Nosotros: Información sobre la empresa -->
+                    <section id="nosotros" class="about">
+                        <div class="container">
+                            <div class="about-grid">
+                                <div class="about-text" style="text-align: center;">
+                                    <h2 class="section-title">Sobre nosotros</h2>
+                                    <p>Somos una empresa familiar con más de 30 años de experiencia en el rubro. Nos dedicamos a ofrecer un servicio de calidad, confianza y dedicación a cada uno de nuestros clientes en Montevideo y Canelones.</p>
+                                    <div class="about-values">
+                                        <div class="value-item">
+                                            <i class="fa-solid fa-star"></i>
+                                            <h3>Calidad</h3>
+                                            <p>Servicios impecables que superan tus expectativas.</p>
+                                        </div>
+                                        <div class="value-item">
+                                            <i class="fa-solid fa-handshake"></i>
+                                            <h3>Confianza</h3>
+                                            <p>Trato honesto y profesional en cada trabajo.</p>
+                                        </div>
+                                        <div class="value-item">
+                                            <i class="fa-solid fa-heart"></i>
+                                            <h3>Dedicación</h3>
+                                            <p>Pasión por la jardinería y compromiso con tu satisfacción.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about-image">
+                                    <!-- Esta imagen se establece a través de CSS -->
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+        <!-- Sección de Preguntas Frecuentes -->
+        <section id="faq" class="faq-section">
             <div class="container">
-                <h2 class="section-title">Sobre Nosotros</h2>
-                <p>Somos una empresa familiar con más de 30 años de experiencia en el rubro. Nos dedicamos a ofrecer un servicio de calidad, confianza y dedicación a cada uno de nuestros clientes en Montevideo.</p>
-            </div>
-        </section>
-        
-        <section id="contacto" class="contact">
-            <div class="container">
-                <h2 class="section-title">Contacto</h2>
-                <div class="contact-grid">
-                    <!-- Información de contacto (WhatsApp) -->
-                    <div class="contact-info">
-                        <h3>¡Hablemos de tu jardín!</h3>
-                        <p>Envíanos un mensaje por WhatsApp para un presupuesto sin costo y personalizado.</p>
-                        <a href="https://wa.link/m5p2eo" class="btn btn-primary">Contactar por WhatsApp</a>
-                    </div>
-                    
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <div class="faq-container">
+                    <details class="faq-item">
+                        <summary class="faq-question">¿Qué métodos de pago aceptan?</summary>
+                        <div class="faq-answer">
+                            <p>Aceptamos todas las tarjetas de crédito y débito, transferencia bancaria, Mercado Pago y efectivo.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">¿En qué zonas trabajan?</summary>
+                        <div class="faq-answer">
+                            <p>Ofrecemos nuestros servicios en Montevideo y Canelones. Para trabajos en otras zonas, por favor consultanos.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">¿La cotización tiene costo?</summary>
+                        <div class="faq-answer">
+                            <p>No, todas nuestras cotizaciones son sin costo y sin compromiso. Podés solicitarlo por WhatsApp para una respuesta más rápida.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">¿Tienen boleta con RUT?</summary>
+                        <div class="faq-answer">
+                            <p>Sí, emitimos boleta con RUT.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">¿Retiran los restos de poda?</summary>
+                        <div class="faq-answer">
+                            <p>Sí, nuestro servicio incluye la recolección y el desecho de todos los restos vegetales generados durante el trabajo, dejando el espacio limpio.</p>
+                        </div>
+                    </details>
                 </div>
             </div>
         </section>
-    </main>
+        
+                    <section id="contacto" class="contact">
+                        <div class="container">
+                    <div class="contact-grid">
+                        <div class="contact-cta">
+                            <h2 class="section-title">Contacto</h2>
+                            <p>Envíanos un mensaje para una cotización sin costo y personalizado. Respuesta inmediata.</p>
+                            <a href="https://wa.link/m5p2eo" class="btn btn-primary">Contactar por WhatsApp<i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                        </div>
+                    </section>    </main>
 
     <!-- Sección del pie de página -->
     <footer class="footer">
@@ -144,14 +312,15 @@
             <nav class="footer-nav">
                 <ul>
                     <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#cta">Cotizaciones</a></li>
                     
                     
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
             <!-- Información de derechos de autor -->
-            <p>&copy; 2025 Alberto Todo Jardín.</p>
+            <p>&copy; 2026 Todo Jardín Montevideo. Todos los derechos reservados.</p>
+            <p><a href="https://jperez.pro/" target="_blank" rel="noopener noreferrer">Diseño Essenza - Javier Perez</a></p>
         </div>
     </footer>
 
