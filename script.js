@@ -7,23 +7,28 @@ const serviceCards = document.querySelectorAll('.service-card');
 const body = document.body;
 
 // Event listener para el botón de alternar menú (abre/cierra el menú móvil)
-menuToggle.addEventListener('click', () => {
-    const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-    menuToggle.setAttribute('aria-expanded', !isExpanded);
-    nav.setAttribute('aria-hidden', isExpanded);
-    menuToggle.classList.toggle('active'); // Anima el icono
-    nav.classList.toggle('active');
-    body.classList.toggle('no-scroll'); // Bloquea/desbloquea el scroll
-    header.classList.toggle('menu-active'); // Añade/quita la clase para controlar el fondo del header
+if (menuToggle && nav && header) {
+    menuToggle.addEventListener('click', () => {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+        menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+        nav.setAttribute('aria-hidden', String(isExpanded));
+        menuToggle.classList.toggle('active'); // Anima el icono
+        nav.classList.toggle('active');
+        body.classList.toggle('no-scroll'); // Bloquea/desbloquea el scroll
+        header.classList.toggle('menu-active'); // Añade/quita la clase para controlar el fondo del header
 
-    if (!isExpanded) {
-        // Si el menú se abre, enfocar el primer enlace del menú para accesibilidad
-        nav.querySelector('a').focus();
-    } else {
-        // Si el menú se cierra, devolver el foco al botón del menú
-        menuToggle.focus();
-    }
-});
+        if (!isExpanded) {
+            // Si el menú se abre, enfocar el primer enlace del menú para accesibilidad
+            const firstNavLink = nav.querySelector('a');
+            if (firstNavLink) {
+                firstNavLink.focus();
+            }
+        } else {
+            // Si el menú se cierra, devolver el foco al botón del menú
+            menuToggle.focus();
+        }
+    });
+}
 
 // Desplazamiento suave para enlaces de anclaje
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -40,7 +45,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
 
         // Cierra el menú móvil si está abierto después de hacer clic en un enlace
-        if (nav.classList.contains('active')) {
+        if (nav && menuToggle && header && nav.classList.contains('active')) {
             menuToggle.classList.remove('active');
             nav.classList.remove('active');
             body.classList.remove('no-scroll'); // Asegura que el scroll se reactive
@@ -56,11 +61,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const highlightActiveNavLink = () => {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
+    const headerHeight = header ? header.offsetHeight : 0;
 
     let currentActive = null;
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - header.offsetHeight; // Ajustar por la altura del header fijo
+        const sectionTop = section.offsetTop - headerHeight; // Ajustar por la altura del header fijo
         const sectionBottom = sectionTop + section.offsetHeight;
 
         if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
@@ -82,15 +88,15 @@ let isScrolling = false;
 window.addEventListener('scroll', () => {
     if (!isScrolling) {
         window.requestAnimationFrame(() => {
-            if (window.scrollY > 50) {
+            if (header && window.scrollY > 50) {
                 header.classList.add('scrolled');
-            } else {
+            } else if (header) {
                 header.classList.remove('scrolled');
             }
 
-            if (window.scrollY > 300) {
+            if (backToTopBtn && window.scrollY > 300) {
                 backToTopBtn.classList.add('show');
-            } else {
+            } else if (backToTopBtn) {
                 backToTopBtn.classList.remove('show');
             }
             highlightActiveNavLink();
@@ -155,13 +161,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const faqItems = document.querySelectorAll('.faq-item');
 
     faqItems.forEach(item => {
-        item.addEventListener('click', event => {
-            // Si el elemento ya está abierto, no hacer nada
-            if (item.open) {
+        item.addEventListener('toggle', () => {
+            // Al abrir uno, cerramos el resto para mantener comportamiento de acordeón
+            if (!item.open) {
                 return;
             }
 
-            // Cerrar todos los demás elementos
             faqItems.forEach(otherItem => {
                 if (otherItem !== item) {
                     otherItem.open = false;

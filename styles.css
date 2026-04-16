@@ -179,6 +179,17 @@ body {
     padding: 4rem 0;
 }
 
+/* Render optimization for below-the-fold sections */
+.services,
+.cta-section,
+.about,
+.faq-section,
+.contact,
+.footer {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 700px;
+}
+
 .section-title {
     text-align: center;
     font-size: 2.5rem;
@@ -243,7 +254,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.value-item h4 {
+.value-item h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
@@ -313,7 +324,7 @@ body {
 }
 
 .cta-section .btn:hover {
-    background-color: #eee;
+    background-color: var(--secondary-color);
 }
 
 .cta-section .feature-list {
@@ -637,6 +648,15 @@ main {
 }
 .nav.active .nav-item:nth-child(2) {
     animation-delay: 0.2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 .nav.active .nav-item:nth-child(3) {
     animation-delay: 0.3s;
