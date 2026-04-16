@@ -1,6 +1,6 @@
-# Alberto TodoJardín
+# Todo Jardín
 
-Este proyecto es un sitio web estático diseñado para "Alberto TodoJardín", un negocio de jardinería y poda en Montevideo, Uruguay. El sitio tiene como objetivo presentar los servicios de la empresa, y facilitar el contacto a través de WhatsApp y un agendador de citas.
+Este proyecto es un sitio web estático diseñado para "Todo Jardín", un negocio de jardinería y poda en Montevideo, Uruguay. El sitio tiene como objetivo presentar los servicios de la empresa y facilitar el contacto a través de WhatsApp.
 
 ## Características
 
@@ -23,14 +23,14 @@ Este proyecto es un sitio web estático diseñado para "Alberto TodoJardín", un
 Dado que es un sitio web estático, no requiere de un servidor backend o configuraciones complejas. Simplemente sigue estos pasos:
 
 1.  **Clonar o Descargar:** Descarga o clona este repositorio en tu máquina local.
-2.  **Abrir `index.html`:** Navega hasta la carpeta `alberto-todo-jardin` y abre el archivo `index.html` en tu navegador web preferido (Chrome, Firefox, Edge, etc.).
+2.  **Abrir `index.html`:** Navega hasta la carpeta del proyecto y abre el archivo `index.html` en tu navegador web preferido (Chrome, Firefox, Edge, etc.).
 
 ## Estructura del Proyecto
 
 El proyecto está organizado de la siguiente manera:
 
 ```
-alberto-todo-jardin/
+todo-jardin/
 ├── index.html          # Página principal del sitio
 ├── styles.css          # Estilos CSS para el diseño del sitio
 ├── script.js           # Lógica JavaScript para interactividad
