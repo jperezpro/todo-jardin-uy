@@ -1,0 +1,19 @@
+# Este repo es publico y un push a la rama por defecto publica el sitio en vivo.
+# Lo que entre al arbol queda a la vista de cualquiera: por eso las credenciales
+# van primero.
+
+# Credenciales
+.env
+.env.*
+!.env.example
+
+# Cache local de Cloudflare Wrangler
+.wrangler/
+
+# Dependencias
+node_modules/
+
+# Basura del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
