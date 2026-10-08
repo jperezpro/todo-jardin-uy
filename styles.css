@@ -142,6 +142,16 @@ body {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para mejorar la visibilidad */
 }
 
+/* Íconos SVG en línea (Font Awesome Free 6.5.2): mismas medidas y alineación
+   que tenían como fuente de íconos (alto 1em, ancho según el viewBox). */
+.icono {
+    display: inline-block;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+    fill: currentColor;
+}
+
 .btn {
     display: inline-block;
     text-decoration: none;
@@ -248,10 +258,13 @@ body {
     justify-content: space-between;
 }
 
-.value-item i {
+.value-item .icono {
     font-size: 2.5rem;
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    /* En bloque ocupa exactamente lo mismo que ocupaba el ícono de fuente
+       (40px + 1rem), sin el alto extra de la línea de texto. */
+    display: block;
+    margin: 0 auto 1rem;
 }
 
 .value-item h3 {
