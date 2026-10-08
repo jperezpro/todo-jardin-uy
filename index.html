@@ -168,8 +168,11 @@
     <!-- Precarga de fuentes de Google Fonts para mejorar el rendimiento -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Enlace a la fuente 'Roboto' de Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Fuente 'Roboto' de Google Fonts sin bloquear el primer pintado: se pide como
+         media="print" y al cargar pasa a "all". Con display=swap el texto se ve desde
+         el principio con la fuente del sistema (en Android, la misma Roboto). -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"></noscript>
     <!-- Icono de la página (favicon) -->
     <link rel="icon" href="assets/favicon.ico" sizes="any">
     <link rel="icon" href="assets/favicon.png" type="image/png">
