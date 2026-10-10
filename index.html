@@ -189,9 +189,10 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-NPVJXD82');</script>
         <!-- End Google Tag Manager -->
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17422000134">
-        </script>
+        <!-- Google tag de Ads: solo el config, sin <script src=".../gtag/js?id=AW-...">.
+             GTM ve este gtag('config') en el dataLayer y carga gtag.js de AW-17422000134
+             por su cuenta (&cx=c): con el src escrito aca se bajaba dos veces. Los envios
+             (remarketing, conversion, GA4) son los mismos; comprobado el 09/10/2026. -->
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
