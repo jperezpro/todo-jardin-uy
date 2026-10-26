@@ -1,43 +1,9 @@
 # Todo Jardín
 
-Este proyecto es un sitio web estático diseñado para "Todo Jardín", un negocio de jardinería en Montevideo, Uruguay. El sitio tiene como objetivo presentar los servicios de la empresa y facilitar el contacto a través de WhatsApp.
+Sitio estático publicado en Cloudflare Pages (push a la rama principal = deploy).
 
-## Características
+- Producción: https://todojardin.com.uy
+- Stack: HTML, CSS, JavaScript
+- Estructura: index.html, styles.css, script.js, assets/, _redirects y functions/ (redirecciones)
 
-- **Página de Inicio:** Presentación del negocio con un banner principal.
-- **Servicios:** Sección detallada de los servicios ofrecidos (mantenimiento de jardines, corte de césped y cercos, limpieza de terrenos).
-- **Sobre Nosotros:** Información sobre la empresa y su experiencia.
-- **Llamada a la Acción (CTA):** Invitación a solicitar presupuestos sin costo por WhatsApp.
-- **Contacto:** Información de contacto principal con enlace directo a WhatsApp.
-- **Navegación Responsiva:** Menú adaptable para dispositivos móviles.
-- **Animaciones de Scroll:** Efectos visuales al desplazarse por la página.
-
-## Tecnologías Utilizadas
-
-- HTML5
-- CSS3
-- JavaScript (vainilla)
-
-## Cómo Ejecutar el Proyecto
-
-Dado que es un sitio web estático, no requiere de un servidor backend o configuraciones complejas. Simplemente sigue estos pasos:
-
-1.  **Clonar o Descargar:** Descarga o clona este repositorio en tu máquina local.
-2.  **Abrir `index.html`:** Navega hasta la carpeta del proyecto y abre el archivo `index.html` en tu navegador web preferido (Chrome, Firefox, Edge, etc.).
-
-## Estructura del Proyecto
-
-El proyecto está organizado de la siguiente manera:
-
-```
-todo-jardin/
-├── index.html          # Página principal del sitio
-├── styles.css          # Estilos CSS para el diseño del sitio
-├── script.js           # Lógica JavaScript para interactividad
-├── README.md           # Este archivo
-└── assets/             # Contiene imágenes y otros recursos multimedia
-    ├── fondo-arboles-horizntal.webp
-    ├── logo-todo-jardin.webp
-```
-
-¡Eso es todo! El sitio web debería cargarse y funcionar correctamente en tu navegador.
+Hecho por Javier Perez · https://jperez.pages.dev
