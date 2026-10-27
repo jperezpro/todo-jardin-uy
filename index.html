@@ -356,10 +356,31 @@
                     <section id="contacto" class="contact">
                         <div class="container">
                     <div class="contact-grid">
+                        <!-- Consulta por WhatsApp: script.js arma el mensaje con los datos y
+                             abre WhatsApp con la consulta escrita; la persona solo la envia.
+                             No pasa por ningun servidor ni queda guardada en la web. -->
                         <div class="contact-cta">
                             <h2 class="section-title">Contacto</h2>
-                            <p>Envíanos un mensaje para una cotización sin costo y personalizada. Respuesta inmediata.</p>
-                            <a href="https://wa.link/m5p2eo" class="btn btn-primary">Contactar por WhatsApp</a>
+                            <p>Completá los datos y se abre WhatsApp con tu consulta escrita: solo tenés que enviarla. La cotización es sin costo.</p>
+                            <form id="consulta" class="consulta">
+                                <label class="campo">Tu nombre
+                                    <input name="nombre" required maxlength="100" autocomplete="name">
+                                </label>
+                                <label class="campo">Barrio o zona
+                                    <input name="zona" required maxlength="100" placeholder="Ej.: Carrasco">
+                                </label>
+                                <fieldset class="campo">
+                                    <legend>¿Qué trabajo necesitás?</legend>
+                                    <label class="opcion"><input type="checkbox" name="servicio" value="mantenimiento del jardín"> Mantenimiento de jardín</label>
+                                    <label class="opcion"><input type="checkbox" name="servicio" value="poda de árboles"> Poda de árboles</label>
+                                    <label class="opcion"><input type="checkbox" name="servicio" value="limpieza de terreno"> Limpieza de terreno</label>
+                                </fieldset>
+                                <label class="campo"><span>Contanos el trabajo <span class="opcional">(opcional)</span></span>
+                                    <textarea name="mensaje" rows="3" maxlength="1000" placeholder="Tamaño del terreno, cuántos árboles, cada cuánto…"></textarea>
+                                </label>
+                                <button type="submit" class="btn btn-primary btn-consulta">Enviar consulta por WhatsApp</button>
+                                <p class="consulta-nota">Después mandanos por el mismo chat tu ubicación y un video del lugar, y te enviamos la cotización en PDF. Tus datos no se guardan en esta web: van solo en el mensaje que enviás vos.</p>
+                            </form>
                         </div>
                     </div>
                         </div>

@@ -175,3 +175,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Consulta por WhatsApp: arma el mensaje con los datos del formulario y abre
+// WhatsApp con la consulta escrita (no pasa por ningun servidor). GTM cuenta
+// como conversion los clics en links de wa.link; este envio no es un link, asi
+// que manda su propio evento `consulta_whatsapp` al dataLayer.
+const consulta = document.getElementById('consulta');
+
+if (consulta) {
+    const unir = (items) => items.length < 2
+        ? items.join('')
+        : `${items.slice(0, -1).join(', ')} y ${items[items.length - 1]}`;
+
+    consulta.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const d = new FormData(consulta);
+        const limpio = (campo) => (d.get(campo) || '').replace(/\s+/g, ' ').trim();
+        const servicios = d.getAll('servicio');
+
+        let texto = `Hola, los vi en su web y necesito un presupuesto. Soy ${limpio('nombre')}, de ${limpio('zona')}.`;
+        if (servicios.length) texto += ` Necesito ${unir(servicios)}.`;
+        if (limpio('mensaje')) texto += ` ${limpio('mensaje')}`;
+
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'consulta_whatsapp' });
+
+        // Sin 'noopener' en window.open: con esa opcion devuelve null siempre
+        // y no se podria saber si el navegador bloqueo la ventana.
+        const url = `https://wa.me/59891665895?text=${encodeURIComponent(texto)}`;
+        const ventana = window.open(url, '_blank');
+        if (ventana) ventana.opener = null;
+        else window.location.href = url;
+    });
+}

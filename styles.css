@@ -403,6 +403,78 @@ body {
     justify-content: center;
 }
 
+/* Consulta por WhatsApp (formulario de #contacto) */
+.consulta {
+    text-align: left;
+    display: grid;
+    gap: 1.25rem;
+}
+
+.consulta .campo {
+    display: grid;
+    gap: 0.4rem;
+    font-weight: 700;
+    border: 0;
+}
+
+.consulta legend {
+    margin-bottom: 0.4rem;
+}
+
+.consulta input:not([type="checkbox"]),
+.consulta textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 400;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+.consulta input:focus,
+.consulta textarea:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 1px;
+    border-color: var(--primary-color);
+}
+
+.consulta .opcion {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 400;
+    padding: 0.35rem 0;
+    cursor: pointer;
+}
+
+.consulta .opcion input {
+    width: 1.2rem;
+    height: 1.2rem;
+    accent-color: var(--primary-color);
+}
+
+.consulta .opcional {
+    font-weight: 400;
+    color: #777;
+}
+
+.contact-cta .consulta .btn-consulta {
+    width: 100%;
+    border: 0;
+    font: inherit;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.contact-cta .consulta .consulta-nota {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
 .contact-cta .btn i {
     margin-left: 0.5rem;
     font-size: 1.2rem;
