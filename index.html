@@ -192,12 +192,16 @@
         <!-- Google tag de Ads: solo el config, sin <script src=".../gtag/js?id=AW-...">.
              GTM ve este gtag('config') en el dataLayer y carga gtag.js de AW-17422000134
              por su cuenta (&cx=c): con el src escrito aca se bajaba dos veces. Los envios
-             (remarketing, conversion, GA4) son los mismos; comprobado el 09/10/2026. -->
+             (remarketing, conversion, GA4) son los mismos; comprobado el 09/10/2026.
+             AW-17422000134 es la cuenta de Nadia; AW-18565674613, la de jvx (conversion
+             "Clic en WhatsApp", la dispara script.js). GTM carga gtag.js para cada
+             config que ve, asi que la segunda cuenta tampoco lleva <script src>. -->
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-17422000134');
+            gtag('config', 'AW-18565674613');
         </script>
 </head>
 <body>
