@@ -177,9 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Consulta por WhatsApp: arma el mensaje con los datos del formulario y abre
-// WhatsApp con la consulta escrita (no pasa por ningun servidor). GTM cuenta
-// como conversion los clics en links de wa.link; este envio no es un link, asi
-// que manda su propio evento `consulta_whatsapp` al dataLayer.
+// WhatsApp con la consulta escrita (no pasa por ningun servidor). La conversion
+// la cuenta el manejador de abajo, igual que un clic en un link a WhatsApp.
 const consulta = document.getElementById('consulta');
 
 if (consulta) {
@@ -197,9 +196,6 @@ if (consulta) {
         if (servicios.length) texto += ` Necesito ${unir(servicios)}.`;
         if (limpio('mensaje')) texto += ` ${limpio('mensaje')}`;
 
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({ event: 'consulta_whatsapp' });
-
         // Sin 'noopener' en window.open: con esa opcion devuelve null siempre
         // y no se podria saber si el navegador bloqueo la ventana.
         const url = `https://wa.me/59891665895?text=${encodeURIComponent(texto)}`;
@@ -212,8 +208,8 @@ if (consulta) {
 // Conversion "Clic en WhatsApp" de la cuenta de Google Ads de jvx (AW-18565674613;
 // el gtag('config') esta en el head). Un solo manejador en el documento cuenta los
 // clics en links a WhatsApp y el envio del formulario de consulta, una vez cada uno.
-// No demora la apertura de WhatsApp: no hay preventDefault (tampoco se toca el
-// conteo de clics que ya hace GTM) y con transport_type 'beacon' el envio llega
+// No demora la apertura de WhatsApp: no hay preventDefault, y con
+// transport_type 'beacon' el envio llega
 // aunque el link cambie de pagina en la misma pestaña.
 const CONVERSION_WHATSAPP = 'AW-18565674613/1tX2CKqxlbUdEPXs5pRF';
 const HOSTS_WHATSAPP = ['wa.link', 'wa.me', 'api.whatsapp.com'];

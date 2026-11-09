@@ -164,7 +164,7 @@
     <link rel="preload" fetchpriority="high" as="image" href="assets/fondo-arboles-horizntal.webp" type="image/webp">
     <!-- Precarga de conexión a CDN para mejor rendimiento -->
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
     <!-- Precarga de fuentes de Google Fonts para mejorar el rendimiento -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -182,34 +182,21 @@
          License - https://fontawesome.com/license/free (CC BY 4.0) Copyright 2024 Fonticons, Inc.
          Antes bajaba 4 CSS y 2 fuentes (~200 KB) que competían con la imagen principal. -->
 
-        <!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-NPVJXD82');</script>
-        <!-- End Google Tag Manager -->
-        <!-- Google tag de Ads: solo el config, sin <script src=".../gtag/js?id=AW-...">.
-             GTM ve este gtag('config') en el dataLayer y carga gtag.js de AW-17422000134
-             por su cuenta (&cx=c): con el src escrito aca se bajaba dos veces. Los envios
-             (remarketing, conversion, GA4) son los mismos; comprobado el 09/10/2026.
-             AW-17422000134 es la cuenta de Nadia; AW-18565674613, la de jvx (conversion
-             "Clic en WhatsApp", la dispara script.js). GTM carga gtag.js para cada
-             config que ve, asi que la segunda cuenta tampoco lleva <script src>. -->
+        <!-- Google tag de la cuenta de Google Ads de jvx (AW-18565674613, 708-490-4850):
+             la conversion "Clic en WhatsApp" la dispara script.js. Es la unica etiqueta
+             de Google del sitio: el 09/11/2026 se sacaron las de Nadia (Tag Manager
+             GTM-NPVJXD82, que cargaba su Ads AW-17422000134 y su Analytics G-FKQSXKKZKM).
+             Hasta ese dia el gtag.js lo cargaba ese Tag Manager; ahora va con su src. -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18565674613"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'AW-17422000134');
             gtag('config', 'AW-18565674613');
         </script>
 </head>
 <body>
     <div id="page-wrapper">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NPVJXD82"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <!-- Sección del encabezado de la página -->
     <header class="header">
         <div class="container">
