@@ -186,13 +186,17 @@
              la conversion "Clic en WhatsApp" la dispara script.js. Es la unica etiqueta
              de Google del sitio: el 09/11/2026 se sacaron las de Nadia (Tag Manager
              GTM-NPVJXD82, que cargaba su Ads AW-17422000134 y su Analytics G-FKQSXKKZKM).
-             Hasta ese dia el gtag.js lo cargaba ese Tag Manager; ahora va con su src. -->
+             Hasta ese dia el gtag.js lo cargaba ese Tag Manager; ahora va con su src.
+             Google Analytics propio (G-ZNQ3C0HB8L, propiedad 563414395 de la cuenta
+             "Javier Perez", vinculada con esa cuenta de Ads): mismo gtag.js, otro config.
+             script.js le manda el evento contacto_whatsapp en cada consulta. -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18565674613"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-18565674613');
+            gtag('config', 'G-ZNQ3C0HB8L');
         </script>
 </head>
 <body>

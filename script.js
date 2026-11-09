@@ -209,9 +209,12 @@ if (consulta) {
 // el gtag('config') esta en el head). Un solo manejador en el documento cuenta los
 // clics en links a WhatsApp y el envio del formulario de consulta, una vez cada uno.
 // No demora la apertura de WhatsApp: no hay preventDefault, y con
-// transport_type 'beacon' el envio llega
-// aunque el link cambie de pagina en la misma pestaña.
+// transport_type 'beacon' el envio llega aunque el link cambie de pagina en la
+// misma pestaña. A Google Analytics (G-ZNQ3C0HB8L) le llega el mismo toque como
+// evento contacto_whatsapp, con origen 'link' o 'formulario', para marcarlo como
+// evento clave.
 const CONVERSION_WHATSAPP = 'AW-18565674613/1tX2CKqxlbUdEPXs5pRF';
+const ANALYTICS = 'G-ZNQ3C0HB8L';
 const HOSTS_WHATSAPP = ['wa.link', 'wa.me', 'api.whatsapp.com'];
 
 const esWhatsapp = (e) => {
@@ -229,6 +232,11 @@ const medirConversionWhatsapp = (e) => {
     if (!esWhatsapp(e) || typeof gtag !== 'function') return;
     gtag('event', 'conversion', {
         send_to: CONVERSION_WHATSAPP,
+        transport_type: 'beacon'
+    });
+    gtag('event', 'contacto_whatsapp', {
+        send_to: ANALYTICS,
+        origen: e.type === 'submit' ? 'formulario' : 'link',
         transport_type: 'beacon'
     });
 };
